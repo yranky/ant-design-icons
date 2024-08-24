@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
@@ -12,11 +13,15 @@
     "angular:ci": "lerna run --scope @ant-design/icons-angular-workspace ci",
     "vue:ci": "lerna run --scope @ant-design/icons-vue ci",
     "react-native:ci": "lerna run --scope @ant-design/icons-react-native ci",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "build:fonts": "node ./scripts/svg2fonts.js"
   },
   "devDependencies": {
     "lerna": "^3.4.0"
   },
   "license": "MIT",
-  "repository": "git@github.com:ant-design/ant-design-icons.git"
+  "repository": "git@github.com:ant-design/ant-design-icons.git",
+  "dependencies": {
+    "svgtofont": "^5.0.3"
+  }
 }
